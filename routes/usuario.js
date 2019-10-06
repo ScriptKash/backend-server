@@ -4,7 +4,6 @@ var app = express();
 var mdAutenticacion = require('../middleware/autenticacion');
 var Usuario = require('../models/usuario');
 
-
 // Obtener todos los usuarios
 // =================================
 app.get('/', ( req, res, next ) => {
@@ -29,8 +28,6 @@ app.get('/', ( req, res, next ) => {
     });
 
 });
-
-
 
 // Actualizar usuario
 // =================================
@@ -84,7 +81,6 @@ app.put('/:id', mdAutenticacion.verificaToken, (req, res) => {
     });
 
 });
-
 
 // Crear un nuevo usuario
 // =================================
